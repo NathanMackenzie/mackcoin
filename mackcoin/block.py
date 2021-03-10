@@ -3,15 +3,15 @@ import json
 import time
 
 class Block:
-    def __init__(self, transaction, prev_hash, timestamp):
+    def __init__(self, transactions, prev_hash, timestamp):
         self.prev_hash = prev_hash
-        self.transaction = transaction
+        self.transactions = transactions
         self.timestamp = timestamp
         self.nonce = 0
         self.hash = self.calc_hash()
 
     def calc_hash(self):
-        temp_str = "{}{}{}{}".format(json.dumps(self.transaction.__dict__), self.prev_hash, self.nonce, self.timestamp)
+        temp_str = "{}{}{}{}".format(json.dumps(self.transactions), self.prev_hash, self.nonce, self.timestamp)
         return hashlib.sha256(temp_str.encode()).hexdigest()
 
 """

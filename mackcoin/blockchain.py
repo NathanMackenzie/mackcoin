@@ -7,13 +7,12 @@ class BlockChain:
         self.pending_transactions = []
 
     def create_genesis(self):
-        trans = block.Transaction("0", "0", 0)
-        return block.Block(trans, "0", time.time())
+        print("Creating genesis block...")
+        trans = [block.Transaction("0", "0", 0).__dict__]
+        gen_block = block.Block(trans, "0", time.time())
+        print("Genesis block created. Hash: " + str(gen_block.hash))
+        return gen_block
 
     def add_transaction(self, transaction):
-        self.pending_transactions.append(transaction)
+        self.pending_transactions.append(transaction.__dict__)
 
-bc = BlockChain()
-
-bc.add_transaction(block.Transaction("nate", "bob", 100))
-bc.add_transaction(block.Transaction("bob", "nate", 50))

@@ -15,7 +15,7 @@ class Block:
         return hashlib.sha256(temp_str.encode()).hexdigest()
 
 """
-This class defines the structure for the typical transaction.
+This class defines the structure for a transaction.
 """
 class Transaction:
     def __init__(self, to_address, from_address, amount):

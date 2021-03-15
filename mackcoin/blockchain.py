@@ -7,10 +7,8 @@ class BlockChain:
         self.pending_transactions = []
 
     def create_genesis(self):
-        print("Creating genesis block...")
         trans = [block.Transaction("0", "0", 0).__dict__]
         gen_block = block.Block(trans, "0", time.time())
-        print("Genesis block created. Hash: " + str(gen_block.hash))
         return gen_block
 
     def add_block(self, block):
@@ -33,6 +31,11 @@ class BlockChain:
 
     def get_balance(self, address):
         sum = 0
+        if(self.validate_chain()):
+            print("Blockchain is valid")
+        else:
+            print("BLOCKCHAIN IS NOT VALID!!!")
+
         for blk in self.chain:
             for trans in blk.transactions:
                 if trans.get("to_address") == address:

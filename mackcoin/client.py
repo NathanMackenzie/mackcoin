@@ -1,30 +1,60 @@
 import blockchain
 import block
 import miner
+import os
 
-#Create new block chain
+
+# Clear console
+def clear_window():
+    os.system('cls' if os.name=='nt' else 'clear')
+
+
+in_command = ""
+
+print("Initializing blockchain...")
 bc = blockchain.BlockChain()
 
-#Add some transactions
-bc.add_transaction(block.Transaction("nate", "bob", 100))
-bc.add_transaction(block.Transaction("bob", "nate", 50))
+print('Enter "list" for a list of commands')
 
-#Create a miner
-mn = miner.Miner(block_chain = bc, miner_address = 'nates-address')
+def list_commands():
+    clear_window()
+    print("*****Commands List*****")
+    print("Exit: ext")
+    print("Mine for coins: mine")
+    print("Make transaction: transaction")
+    print("Check balance: balance \n")
 
-#Display pending transactions
-#bc.print_pending_transactions()
+def make_transaction():
+    clear_window()
+    frm = input("Enter your ID: ")
+    to = input("Enter recipients ID: ")
+    amt = input("Enter amount: ")
+    bc.add_transaction(block.Transaction(to, frm, int(amt)))
+    clear_window()
+    print("Transaction complete\n")
 
-#Begin mining transactions
-mn.mine_pending_transactions()
+def mine_coins():
+    clear_window()
+    ad = input("Enter your ID: ")
+    mn = miner.Miner(block_chain = bc, miner_address = ad)
+    clear_window()
+    print("Mining begun...")
+    mn.mine_pending_transactions()
 
-bc.add_transaction(block.Transaction("nate", "bob", 2100))
-bc.add_transaction(block.Transaction("bob", "nate", 500))
+def check_balance():
+    clear_window()
+    ad = input("Enter your ID to check balance: ")
+    print("Your balance is: " + str(bc.get_balance(ad)))
 
-mn.mine_pending_transactions()
 
-#Print new blockchain
-print("getting bobs balance")
-print(bc.get_balance("bob"))
-print(bc.validate_chain())
-
+while(in_command != "ext"):
+    in_command = input("Enter command: ")
+    
+    if in_command == "list":
+        list_commands()
+    elif in_command == "transaction":
+        make_transaction()
+    elif in_command == "mine":
+        mine_coins()
+    elif in_command == "balance":
+        check_balance()

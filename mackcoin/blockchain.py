@@ -13,6 +13,20 @@ class BlockChain:
         print("Genesis block created. Hash: " + str(gen_block.hash))
         return gen_block
 
+    def add_block(self, block):
+        self.chain.append(block)
+
     def add_transaction(self, transaction):
         self.pending_transactions.append(transaction.__dict__)
 
+    def clear_pending_transactions(self):
+        self.pending_transactions.clear()
+
+    def print_pending_transactions(self):
+        for i in self.pending_transactions:
+            print("******Transaction*******")
+            print(i)
+
+    def print_blockchain(self):
+        for i in self.chain:
+            print(i.transactions)

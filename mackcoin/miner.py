@@ -17,7 +17,6 @@ class Miner:
         print("Mining finished in {:.2f} seconds".format(time.time() - start_time))
         print("New hash: " + self.blk.hash)
 
-    def print_pending_transactions(self):
-        for i in self.bc.pending_transactions:
-            print("******Transaction*******")
-            print(i)
+        self.bc.add_block(self.blk)
+        self.bc.clear_pending_transactions()
+

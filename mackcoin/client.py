@@ -13,7 +13,11 @@ bc.add_transaction(block.Transaction("bob", "nate", 50))
 mn = miner.Miner(block_chain = bc, miner_address = 'nates-addess')
 
 #Display pending transactions
-mn.print_pending_transactions()
+bc.print_pending_transactions()
 
 #Begin mining transactions
 mn.mine_pending_transactions()
+
+#Print new blockchain
+bc.print_blockchain()
+

@@ -19,4 +19,5 @@ class Miner:
 
         self.bc.add_block(self.blk)
         self.bc.clear_pending_transactions()
+        self.bc.add_transaction(block.Transaction(self.miner_address, 'null', 1))
 

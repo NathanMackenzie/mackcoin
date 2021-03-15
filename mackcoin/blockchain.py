@@ -29,4 +29,17 @@ class BlockChain:
 
     def print_blockchain(self):
         for i in self.chain:
-            print(i.transactions)
+            print(i.__dict__)
+
+    def get_balance(self, address):
+        sum = 0
+        for blk in self.chain:
+            for trans in blk.transactions:
+                if trans.get("to_address") == address:
+                    sum += trans.get("amount")
+                if trans.get("from_address") == address:
+                    sum -= trans.get("amount")
+        return sum
+
+        
+

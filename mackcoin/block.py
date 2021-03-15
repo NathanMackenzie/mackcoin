@@ -9,8 +9,6 @@ class Block:
         self.timestamp = timestamp
         self.nonce = 0
         self.hash = self.calc_hash()
-        for i in self.transactions:
-            print(i)
 
     def calc_hash(self):
 

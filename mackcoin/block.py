@@ -17,8 +17,9 @@ class Block:
 
     def mine_block(self):
         while(self.hash[0:5] != "00000"):
-            self.hash = self.calc_hash()
             self.nonce += 1
+            self.hash = self.calc_hash()
+            
         print("Block successfully mined.")
 
         

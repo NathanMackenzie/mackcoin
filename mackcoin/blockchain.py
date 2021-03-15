@@ -41,5 +41,12 @@ class BlockChain:
                     sum -= trans.get("amount")
         return sum
 
+    def validate_chain(self):
+        for i in self.chain:
+            if i.hash == i.calc_hash():
+                pass
+            else:
+                return False
+        return True
         
 

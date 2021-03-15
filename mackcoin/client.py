@@ -26,4 +26,5 @@ mn.mine_pending_transactions()
 #Print new blockchain
 print("getting bobs balance")
 print(bc.get_balance("bob"))
+print(bc.validate_chain())
 

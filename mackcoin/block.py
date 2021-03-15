@@ -14,6 +14,15 @@ class Block:
         temp_str = "{}{}{}{}".format(json.dumps(self.transactions), self.prev_hash, self.nonce, self.timestamp)
         return hashlib.sha256(temp_str.encode()).hexdigest()
 
+    def mine_block(self):
+        while(self.hash[0:5] != "00000"):
+            self.hash = self.calc_hash()
+            self.nonce += 1
+        print("Block successfully mined.")
+
+        
+    
+
 """
 This class defines the structure for a transaction.
 """

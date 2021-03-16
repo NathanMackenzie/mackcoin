@@ -9,14 +9,16 @@ Feel free to use and refrence this code as needed in accordance to the MIT licen
 Initial start screen when launching the client.
 
 <p align="center">
-  <img src="./img/ScreenShot_1.PNG" alt="Launch screen" width="400">
+  <img src="./img/ScreenShot_1.png" alt="Launch screen" width="400">
 </p>
 
 List of input commands.
 
 <p align="center">
-  <img src="./img/ScreenShot_2.PNG" alt="Launch screen" width="400">
+  <img src="./img/ScreenShot_2.png" alt="Launch screen" width="400">
 </p>
+
+
 
 ## Licence
 

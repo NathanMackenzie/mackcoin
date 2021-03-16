@@ -37,7 +37,6 @@ def mine_coins():
     clear_window()
     ad = input("Enter your ID: ")
     mn = miner.Miner(block_chain = bc, miner_address = ad)
-    clear_window()
     print("Mining begun...")
     mn.mine_pending_transactions()
 

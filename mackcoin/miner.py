@@ -13,8 +13,10 @@ class Miner:
         self.blk = block.Block(self.bc.pending_transactions , self.bc.chain[-1].hash, time.time())
         self.blk.mine_block()
 
-        print("Mining finished in {:.2f} seconds".format(time.time() - start_time))
-
+        print("\nNew block mined")
+        print(self.blk.__dict__)
+        print("\nMining finished in {:.2f} seconds".format(time.time() - start_time))
+        print(str(self.miner_address) + " has recieved 1 coin")
         self.bc.add_block(self.blk)
         self.bc.clear_pending_transactions()
         self.bc.add_transaction(block.Transaction(self.miner_address, 'null', 1))

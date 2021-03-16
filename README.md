@@ -9,31 +9,31 @@ Feel free to use and refrence this code as needed in accordance to the MIT licen
 Initial start screen when launching the client.
 
 <p align="center">
-  <img src="./img/ScreenShot_1.png" alt="Launch screen" width="400">
+  <img src="./img/ScreenShot_1.png" alt="Launch screen" width="300">
 </p>
 
 List of input commands.
 
 <p align="center">
-  <img src="./img/ScreenShot_2.png" alt="List screen" width="400">
+  <img src="./img/ScreenShot_2.png" alt="List screen" width="300">
 </p>
 
 Making a transaction.
 
 <p align="center">
-  <img src="./img/ScreenShot_3.png" alt="Transaction screen" width="400">
+  <img src="./img/ScreenShot_3.png" alt="Transaction screen" width="300">
 </p>
 
 Mining pending transactions.
 
 <p align="center">
-  <img src="./img/ScreenShot_4.png" alt="Transaction screen" width="600">
+  <img src="./img/ScreenShot_4.png" alt="Transaction screen" width="400">
 </p>
 
 Checking a users balance. 
 
 <p align="center">
-  <img src="./img/ScreenShot_5.png" alt="Transaction screen" width="400">
+  <img src="./img/ScreenShot_5.png" alt="Transaction screen" width="300">
 </p>
 
 ## Licence

@@ -21,8 +21,8 @@ def list_commands():
     print("*****Commands List*****")
     print("Exit: ext")
     print("Mine for coins: mine")
-    print("Make transaction: transaction")
-    print("Check balance: balance \n")
+    print("Make transaction: trans")
+    print("Check balance: bal \n")
 
 def make_transaction():
     clear_window()
@@ -52,9 +52,9 @@ while(in_command != "ext"):
     
     if in_command == "list":
         list_commands()
-    elif in_command == "transaction":
+    elif in_command == "trans":
         make_transaction()
     elif in_command == "mine":
         mine_coins()
-    elif in_command == "balance":
+    elif in_command == "bal":
         check_balance()

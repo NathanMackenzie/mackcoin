@@ -7,7 +7,7 @@ Feel free to use and refrence this code as needed in accordance to the MIT licen
 
 ## Operation
 <p align="center">
-  <img src="./img/ScreenShot_1.png" alt="Launch screen" width="500">
+  <img src="./img/ScreenShot_1.PNG" alt="Launch screen" width="500">
 </p>
 
 ## Licence
